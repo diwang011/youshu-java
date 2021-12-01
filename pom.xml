@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github</groupId>
     <artifactId>youshu-java</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>youshu-java</name>
     <description>腾讯有数后端Java数据接入工具</description>
 
@@ -13,7 +13,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
-        <github.global.server>github</github.global.server>
     </properties>
 
     <dependencies>
@@ -47,7 +46,6 @@
     </dependencyManagement>
 
     <build>
-        <finalName>youshu-java</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
