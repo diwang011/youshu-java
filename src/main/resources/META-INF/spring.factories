@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.github.youshu.service.impl.YoushuApiImpl
+  com.github.youshu.service.YoushuApi
