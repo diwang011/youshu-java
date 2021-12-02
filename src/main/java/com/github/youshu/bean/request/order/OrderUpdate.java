@@ -23,7 +23,7 @@ public class OrderUpdate {
      */
     private String order_status;
     /**
-     * 	状态变更时间，unix毫秒级时间，如 order_status状态为 1150 ，则传 1150（已支付待发货）状态变更的时间
+     * 状态变更时间，unix毫秒级时间，如 order_status状态为 1150 ，则传 1150（已支付待发货）状态变更的时间
      * 必填
      */
     private String status_change_time;

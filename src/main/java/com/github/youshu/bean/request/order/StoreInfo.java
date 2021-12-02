@@ -13,15 +13,15 @@ import lombok.Data;
 @Data
 public class StoreInfo {
     /**
-     *	主订单销售门店id
+     * 主订单销售门店id
      */
     private String external_store_id;
     /**
-     *	主订单销售门店名称
+     * 主订单销售门店名称
      */
     private String store_name;
     /**
-     *	主订单销售门店所属城市
+     * 主订单销售门店所属城市
      */
     private String store_city;
 }

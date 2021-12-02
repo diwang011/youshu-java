@@ -1,6 +1,3 @@
-/**
- * Copyright 2021 bejson.com
- */
 package com.github.youshu.bean.request.sku;
 
 import lombok.Data;
@@ -13,7 +10,7 @@ import lombok.Data;
 @Data
 public class CommentInfo {
     /**
-     * 	商品评论数
+     * 商品评论数
      */
     private Integer comment_num;
     /**

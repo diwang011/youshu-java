@@ -1,4 +1,4 @@
-package com.github.youshu.bean.request.sku;
+package com.github.youshu.bean.request.sku.store;
 
 import com.github.youshu.bean.request.YoushuRequest;
 import lombok.Data;
@@ -11,10 +11,11 @@ import java.util.List;
  * @Date: 2021/11/30 10:53
  */
 @Data
-public class SkuBean<T> extends YoushuRequest {
+public class StoreBean extends YoushuRequest {
     /**
-     * 商品SKU列表 数组最大长度 50
+     * 仓库列表 数组最大长度 50
      * 必填
      */
-    private List<T> skus;
+    private List<Store> stores;
+
 }

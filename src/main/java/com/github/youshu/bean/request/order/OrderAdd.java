@@ -34,7 +34,7 @@ public class OrderAdd {
      */
     private String order_source;
     /**
-     * 	订单类型；1：普通订单；2：充值订单；3：消费订单（如停车费）；4:预售订单_预付；5：预售订单_尾款；6：优惠券订单，普通购买商品订单传 1 即可；7：积分订单
+     * 订单类型；1：普通订单；2：充值订单；3：消费订单（如停车费）；4:预售订单_预付；5：预售订单_尾款；6：优惠券订单，普通购买商品订单传 1 即可；7：积分订单
      * 必填
      */
     private Integer order_type;
@@ -86,7 +86,7 @@ public class OrderAdd {
      */
     private String order_status;
     /**
-     * 	状态变更时间，unix毫秒级时间，如 order_status状态为 1150 ，则传 1150（已支付待发货）状态变更的时间
+     * 状态变更时间，unix毫秒级时间，如 order_status状态为 1150 ，则传 1150（已支付待发货）状态变更的时间
      * 必填
      */
     private String status_change_time;

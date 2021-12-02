@@ -13,15 +13,15 @@ import lombok.Data;
 @Data
 public class ExpressPage {
     /**
-     *	快递详情页跳转链接（小程序页面，小程序填此字段）
+     * 快递详情页跳转链接（小程序页面，小程序填此字段）
      */
     private String miniprogram_path;
     /**
-     *	小程序APPID，填写了miniprogram_path需填此字段
+     * 小程序APPID，填写了miniprogram_path需填此字段
      */
     private String miniprogram_appid;
     /**
-     *	快递详情页跳转链接（h5页面，公众号填此字段）
+     * 快递详情页跳转链接（h5页面，公众号填此字段）
      */
     private String miniprogram_h5;
 

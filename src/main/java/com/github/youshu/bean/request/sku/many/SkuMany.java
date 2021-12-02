@@ -1,5 +1,9 @@
-package com.github.youshu.bean.request.sku;
+package com.github.youshu.bean.request.sku.many;
 
+import com.github.youshu.bean.request.sku.CommentInfo;
+import com.github.youshu.bean.request.sku.DescInfo;
+import com.github.youshu.bean.request.sku.MediaInfo;
+import com.github.youshu.bean.request.sku.SalesInfo;
 import lombok.Data;
 
 import java.util.List;
@@ -10,7 +14,8 @@ import java.util.List;
  * @Date: 2021/11/30 10:53
  */
 @Data
-public class Sku {
+public class SkuMany {
+
     /**
      * 您为商品SKU分配的唯一ID。 一般而言，是您在商品库为该商品SKU分配的id。 字段长度最小 1 字节，长度最大 128 字节
      * 必填
@@ -32,50 +37,32 @@ public class Sku {
      * 品牌名称。字段长度最小 1 字节，长度最大 64 字节
      */
     private String brand_name;
+
     /**
-     * 商品图片及视频信息 数组最大长度 10
-     * 必填
+     * 商品图片url列表 数组最大长度 10
      */
-    private MediaInfo media_info;
+    private List<MediaInfo> img_urls;
     /**
-     * 类目信息
-     * 必填
+     * 商品属性
      */
-    private List<CategoryInfo> category_info;
+    private ProductProps product_props;
     /**
      * 商品销售信息
      * 必填
      */
-    private SalesInfo sales_info;
+    private SalesInfo sales_props;
     /**
      * 商品描述信息
      * 必填
      */
-    private DescInfo desc_info;
+    private DescInfo desc_props;
     /**
-     * 商品销售信息
+     * 客户侧的商品创建时间，unix时间戳，字段长度为 13 字节
      * 必填
      */
-    private Price price;
-    /**
-     * 商品目标页信息
-     */
-    private TargetUrl target_url;
-    /**
-     * 店铺信息
-     */
-    private StoreInfo store_info;
-    /**
-     * 优惠券信息
-     */
-    private List<CouponInfo> coupon_info;
+    private String external_created_time;
     /**
      * 评论信息
      */
     private CommentInfo comment_info;
-    /**
-     * 商家标记商品已删除；0：未删除，1：已删除，为空默认为0
-     */
-    private Integer is_deleted;
-
 }

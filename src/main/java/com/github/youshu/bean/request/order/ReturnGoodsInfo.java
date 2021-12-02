@@ -34,7 +34,7 @@ public class ReturnGoodsInfo {
      */
     private String spu_name_chinese;
     /**
-     *  退货商品金额，单位元，两位小数
+     * 退货商品金额，单位元，两位小数
      * 必填
      */
     private Float return_goods_amount;

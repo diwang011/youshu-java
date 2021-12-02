@@ -1,6 +1,3 @@
-/**
- * Copyright 2021 bejson.com
- */
 package com.github.youshu.bean.request.sku;
 
 import lombok.Data;

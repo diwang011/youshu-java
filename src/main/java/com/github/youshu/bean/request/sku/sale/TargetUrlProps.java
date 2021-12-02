@@ -1,4 +1,4 @@
-package com.github.youshu.bean.request.sku;
+package com.github.youshu.bean.request.sku.sale;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import lombok.Data;
  * @Date: 2021/11/30 10:53
  */
 @Data
-public class TargetUrl {
+public class TargetUrlProps {
     /**
      * 微信小程序落地页 url，当落地页为微信小程序时必填 字段长度最小 1 字节，长度最大 100 字节
      */

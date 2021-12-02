@@ -8,10 +8,11 @@ package com.github.youshu.utils;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 public class YoushuApiSignature {
-    String app_id ;
+    String app_id;
     String app_secret;
     StringBuilder hexStringBuilder = new StringBuilder();
 
@@ -29,6 +30,10 @@ public class YoushuApiSignature {
         this.app_secret = app_secret;
     }
 
+    public static void main(String[] args) throws Exception {
+        System.out.println(new YoushuApiSignature().sign());
+    }
+
     /**
      * app_id=${app_id}&nonce=${nonce}&sign=sha256&timestamp=${timestamp}&signature=${signature}
      *
@@ -42,9 +47,9 @@ public class YoushuApiSignature {
         try {
             String str = String.format("app_id=%s&nonce=%s&sign=sha256&timestamp=%s", app_id, nonce, timestamp);
             Mac mac = Mac.getInstance("HmacSHA256");
-            SecretKeySpec secretKey = new SecretKeySpec(app_secret.getBytes("UTF-8"), mac.getAlgorithm());
+            SecretKeySpec secretKey = new SecretKeySpec(app_secret.getBytes(StandardCharsets.UTF_8), mac.getAlgorithm());
             mac.init(secretKey);
-            byte[] bytes = mac.doFinal(str.getBytes("UTF-8"));
+            byte[] bytes = mac.doFinal(str.getBytes(StandardCharsets.UTF_8));
             hexStringBuilder.setLength(0);
             for (int i = 0; i < bytes.length; ++i) {
                 String hex = Integer.toHexString(0xff & bytes[i]);
@@ -59,9 +64,5 @@ public class YoushuApiSignature {
 
         }
         return "";
-    }
-
-    public static void main(String[] args) throws Exception {
-        System.out.println(new YoushuApiSignature().sign());
     }
 }

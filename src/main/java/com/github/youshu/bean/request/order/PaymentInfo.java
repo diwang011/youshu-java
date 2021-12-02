@@ -13,7 +13,7 @@ import lombok.Data;
 @Data
 public class PaymentInfo {
     /**
-     *支付方式
+     * 支付方式
      */
     private String payment_type;
     /**
@@ -21,7 +21,7 @@ public class PaymentInfo {
      */
     private String trans_id;
     /**
-     *金额，单位默认为元
+     * 金额，单位默认为元
      */
     private Float trans_amount;
 }
