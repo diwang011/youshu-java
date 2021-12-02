@@ -15,12 +15,13 @@ import com.github.youshu.enums.InterfaceType;
 import com.github.youshu.service.YoushuApi;
 import com.github.youshu.utils.YoushuApiSignature;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
 @Slf4j
-@AllArgsConstructor
+@RequiredArgsConstructor(onConstructor__ = @Autowired)
 public class YoushuApiImpl implements YoushuApi {
     private final YoushuProperties properties;
 
