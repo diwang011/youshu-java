@@ -6,6 +6,10 @@ package com.github.youshu.utils;
  * @Date: 2021/11/30 9:53
  */
 
+import cn.hutool.core.date.DateUtil;
+import cn.hutool.crypto.SecureUtil;
+import cn.hutool.crypto.digest.MD5;
+
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
@@ -31,7 +35,12 @@ public class YoushuApiSignature {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println(new YoushuApiSignature().sign());
+        System.out.println(new YoushuApiSignature().sign1());
+    }
+
+    private String sign1() {
+        String str="apiKey=98765432&method=platformApi/v1/order/sale/receive&secret=23456789&timestamp=1567664598714";
+        return SecureUtil.md5(str);
     }
 
     /**
