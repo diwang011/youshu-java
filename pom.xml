@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github</groupId>
     <artifactId>youshu-java</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>youshu-java</name>
     <description>腾讯有数后端Java数据接入工具</description>
     <properties>
