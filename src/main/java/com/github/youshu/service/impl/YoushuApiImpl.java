@@ -23,9 +23,8 @@ import com.github.youshu.enums.InterfaceType;
 import com.github.youshu.service.YoushuApi;
 import com.github.youshu.utils.YoushuApiSignature;
 import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
+
 @AllArgsConstructor
 public class YoushuApiImpl implements YoushuApi {
     private final YoushuProperties properties;
@@ -109,7 +108,7 @@ public class YoushuApiImpl implements YoushuApi {
                 .header("Accept ", "application/json")
                 .setConnectionTimeout(3000)
                 .execute().body();
-        log.info("getDataSource:" + body);
+        System.out.println("getDataSource:" + body);
         return JSONUtil.toBean(body, YoushuResponse.class);
     }
 
@@ -193,7 +192,7 @@ public class YoushuApiImpl implements YoushuApi {
                 .header("Accept ", "application/json")
                 .setConnectionTimeout(3000).setReadTimeout(10000)
                 .execute().body();
-        log.info("res:" + body);
+        System.out.println("res:" + body);
         return JSONUtil.toBean(body, YoushuResponse.class);
     }
 }
